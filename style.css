@@ -35,6 +35,10 @@ nav {
     align-items: center;
 }
 
+#btnMenu{
+    display: none;
+}
+
 nav h1 {
     font-size: 2em;
     font-weight: bold;
@@ -127,15 +131,12 @@ nav a:hover {
     justify-content: space-between;
 }
 
-#receitas article {
+.boxReceitas {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     width: 25%;
     color: var(--text-color);
-}
-
-.boxReceitas {
     background-color: var(--white-color);
     border-radius: 6px;
 }
@@ -170,6 +171,7 @@ nav a:hover {
     color: var(--white-color);
     text-decoration: none;
     margin: auto auto 1rem;
+    transition: all 0.3s ease;
 }
 
 .boxReceitas a:hover {
@@ -220,6 +222,153 @@ footer h3{
 
 footer p {
     text-align: center;
-    padding-bottom: 1rem;
+    padding: 0 0.5rem 1rem;
+}
+
+@media (max-width:530px) {
+    #btnMenu{
+        display: flex;
+    }
+
+    .menu{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 0;
+        top: 8vh;
+        right: 0;
+        width: 20%;
+        min-height: 20vh;
+    }
+
+    nav h1{
+        font-size: 1.6em;
+    }
+
+    #textoInicial{
+        width: 100vw;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    
+    #boxPrincipal {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    #boxPrincipal h2{
+        font-size: 2.2em;
+    }
+
+    #boxPrincipal p{
+        font-size: 1.2em;
+    }
+
+    #boxPrincipal a {
+        font-size: 1.2em;
+        margin: 4rem auto;
+    }
+
+    #textoReceitas {
+        font-size: 2em;
+    }
+
+    #blocoReceitas{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .boxReceitas{
+        width: 70%;
+    }
+
+    #contato {
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+}
+
+@media (min-width: 530px) and (max-width:630px){
+    #btnMenu{
+        display: flex;
+    }
+
+    .menu{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 0;
+        top: 8vh;
+        right: 0;
+        width: 15%;
+        min-height: 20vh;
+    }
+
+    nav h1{
+        font-size: 1.8em;
+    }
+
+    #textoInicial{
+        width: 100vw;
+        min-height: 80vh;
+        padding-top: 6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+    #boxPrincipal {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    #boxPrincipal h2{
+        font-size: 2.4em;
+    }
+
+    #boxPrincipal p{
+        font-size: 1.2em;
+    }
+
+    #boxPrincipal a {
+        font-size: 1.2em;
+        margin: 2rem 0;
+    }
+
+    #textoReceitas {
+        font-size: 2em;
+    }
+
+    #blocoReceitas{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .boxReceitas{
+        width: 70%;
+    }
+
+    #contato {
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
 }
 
